@@ -7,6 +7,14 @@ from playsound import playsound
 count = 0  
 timer = 0
 
+### Função Pause
+def pause():
+    timer.blockSignals(True)
+    
+### Função despausar    
+def play_pause():
+    timer.blockSignals(False)   
+
 
 ### Função parar - Para o timer, reseta a variavel count e reseta a barra de progressão
 def parar():
@@ -14,6 +22,7 @@ def parar():
     count = 0
     tela.pb_cronometro.setValue(0)
     timer.stop()
+    #timer.blockSignals(True)
 
 ### Função reset - Reset a variavel count e barra de progressão
 def reset():
@@ -71,5 +80,7 @@ tela=uic.loadUi("pomodoro.ui")
 tela.setFixedSize(380, 160)
 tela.bt_iniciar.clicked.connect(cronometro)
 tela.bt_parar.clicked.connect(parar)
+tela.bt_pause.clicked.connect(pause)
+tela.bt_play.clicked.connect(play_pause)
 tela.show()
 app.exec()

@@ -28,7 +28,7 @@
     <rect>
      <x>20</x>
      <y>100</y>
-     <width>161</width>
+     <width>90</width>
      <height>41</height>
     </rect>
    </property>
@@ -57,7 +57,7 @@ QPushButton:pressed{
   <widget class="QLineEdit" name="ln_tempo">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>80</x>
      <y>56</y>
      <width>61</width>
      <height>28</height>
@@ -77,7 +77,7 @@ QPushButton:pressed{
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>20</x>
      <y>60</y>
      <width>51</width>
      <height>20</height>
@@ -146,7 +146,7 @@ QPushButton:pressed{
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>150</x>
      <y>60</y>
      <width>51</width>
      <height>20</height>
@@ -165,9 +165,9 @@ QPushButton:pressed{
   <widget class="QPushButton" name="bt_parar">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>260</x>
      <y>100</y>
-     <width>161</width>
+     <width>90</width>
      <height>41</height>
     </rect>
    </property>
@@ -195,12 +195,83 @@ QPushButton:pressed{
     <string>Parar</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="bt_pause">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>100</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	
+	color: rgb(255, 255, 255);
+	
+	background-color: rgb(170, 0, 127);
+	border-radius: 10px
+}
+
+QPushButton:pressed{	
+	
+	
+	background-color: rgb(170, 170, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>||</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_play">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	
+	background-color: rgb(0, 0, 255);
+	
+	color: rgb(255, 255, 255);
+	border-radius: 10px
+}
+
+QPushButton:pressed{	
+	
+	background-color: rgb(0, 170, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>&gt; ||</string>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>bt_iniciar</zorder>
   <zorder>ln_tempo</zorder>
   <zorder>pb_cronometro</zorder>
-  <zorder>label_2</zorder>
   <zorder>bt_parar</zorder>
+  <zorder>bt_pause</zorder>
+  <zorder>bt_play</zorder>
  </widget>
  <resources>
   <include location="tomate.qrc"/>
